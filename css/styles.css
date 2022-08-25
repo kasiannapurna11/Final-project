@@ -1,0 +1,260 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-size: cover;
+  font-family: sans-serif;
+}
+.theme-background {
+  background: rgb(51, 112, 205);
+}
+.menu-bar {
+  background: rgb(51, 112, 205);
+  text-align: center;
+}
+.menu-bar ul {
+  display: flex;
+  justify-content: end;
+  list-style: none;
+  color: #fff;
+}
+.menu-bar ul li {
+  /* width: 120px; */
+  margin: 15px;
+  padding: 15px;
+}
+.menu-bar ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+.active,
+.menu-bar ul li:hover {
+  border-radius: 3px;
+}
+.menu-bar .fa {
+  margin-right: 8px;
+}
+.sub-menu-1 {
+  display: none;
+}
+.menu-bar ul li:hover .sub-menu-1 {
+  display: block;
+  position: absolute;
+  background-color: rgb(51, 112, 205);
+  margin-top: 15px;
+  margin-left: -15px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul {
+  /* display: block; */
+  margin: 10px;
+}
+.menu-bar ul li:hover .sub-menu-1 li {
+  /* width: 150px; */
+  padding: 10px;
+  border-bottom: 1px dotted #fff;
+  background: transparent;
+  border-radius: 0;
+  text-align: left;
+}
+.menu-bar ul li:hover .sub-menu-1 li:last-child {
+  border-bottom: none;
+}
+.menu-bar ul li:hover .sub-menu-1 li a:hover {
+  color: rgb(51, 112, 205);
+}
+#logo {
+  width: 55px;
+  margin-right: 80rem;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  height: 55px;
+}
+
+/*responsive*/
+@media (max-width: 767px) {
+  .footer-col {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 574px) {
+  .footer-col {
+    width: 100%;
+  }
+}
+.flex-container {
+  /* We first create a flex layout context */
+  display: flex;
+
+  /* Then we define the flow direction 
+	   and if we allow the items to wrap 
+	 * Remember this is the same as:
+	 * flex-direction: row;
+	 * flex-wrap: wrap;
+	 */
+  flex-flow: row wrap;
+
+  /* Then we define how is distributed the remaining space */
+  justify-content: space-evenly;
+
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.flex-item {
+  background: rgb(51, 112, 205);
+  padding: 5px;
+  width: 200px;
+  height: 150px;
+  margin-top: 10px;
+  line-height: 150px;
+  color: white;
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
+  border-radius: 75%;
+}
+
+li a,
+.dropbtn {
+  display: inline-block;
+  color: rgb(51, 112, 205);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover,
+.dropdown:hover .dropbtn {
+  background-color: rgb(51, 112, 205);
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: rgb(138, 148, 159);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+#register-form {
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px;
+  background-color: #fff;
+}
+#image-books {
+  background-image: url("../images/library-488690_1920.jpg");
+
+  min-height: 380px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+#register-submit {
+  font-size: 1.5rem;
+}
+#login-form {
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px;
+  background-color: #fff;
+}
+#login-submit {
+  font-size: 1.5rem;
+}
+#book-submit {
+  font-size: 1.5rem;
+}
+#book-form {
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px;
+  background-color: #fff;
+}
+#issue-form {
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px;
+  background-color: #fff;
+}
+#return-form {
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px;
+  background-color: #fff;
+}
+#myTable {
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px;
+  background-color: #fff;
+}
+h1 {text-align: center;}
+.image-grid {
+  /* Arrange children using flexbox */
+  display: flex;
+  /* ALlow images to display on multiple lines rather than a single line */
+  flex-wrap: wrap;
+  /* Container should take up only 90% of the browser, leave 5% space on each side */
+  width: 90%;
+  /* Center container */
+  margin: 0 auto;
+}
+.grid-image {
+  /* images display inline by default and act like text. We want them to act like divs, so display block */
+  display: block;
+  /* our width setting for mobile, one image per line */
+  flex-basis: 100%;
+  /* provide some space between our images */
+  padding: 10px;
+  /* ensure padding doesn't cause images to wrap, it should be within the width rather than in addition */
+  box-sizing: border-box;
+}
+ 
+/* increase images per line as browser gets larger using media queries
+   this first query makes two images per line at 640px width */
+@media only screen and (min-width: 640px) {
+  .grid-image {
+    flex-basis: 50%;
+  }
+}
+ 
+/* three images per line when browser width exceeds 960px */
+@media only screen and (min-width: 960px) {
+  .grid-image {
+    flex-basis: 33.333%;
+  }
+}
+ 
+/* four images per line when browser width exceeds 1280px */
+@media only screen and (min-width: 1280px) {
+  .grid-image {
+    flex-basis: 25%;
+  }
+}
+ 
+/* five images per line when browser width exceeds 1600px */
+@media only screen and (min-width: 1600px) {
+  .grid-image {
+    flex-basis: 20%;
+  }
+}
